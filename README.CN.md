@@ -47,17 +47,18 @@ python setup.py develop
 
 ```python
 from pipeflow.core.pipeflow_action import PipeflowAction
-
+from types import MappingProxyType
+from typing import Any
 
 class AAction(PipeflowAction):
-    def execute(self, context):
+    async def execute(self, params: MappingProxyType) -> Any:
         # Implement your data processing logic  
         # Access and modify data in the context  
         pass
 
 
 class BAction(PipeflowAction):
-    def execute(self, context):
+    async def execute(self, params: MappingProxyType) -> Any:
         # ...
         pass
 
@@ -66,7 +67,7 @@ class CAction(PipeflowAction):
     def upstream(self):
         return [AAction, BAction]
 
-    def execute(self, context):
+    async def execute(self, params: MappingProxyType) -> Any:
         # ... 
         pass
 # class D and E...
@@ -113,10 +114,10 @@ result = pipeline.execute(initial_params={"key1": "value1"})
 ```  
 
 ## 5. 可视化流程
-使用 visualizer.py 来生成并查看你的 action 节点流程流转顺序图：
+使用 view.py 来生成并查看你的 action 节点流程流转顺序图：
 
 ```commandline
-python visualizer.py 
+python view.py 
 ```
 
 ## 自定义插件
