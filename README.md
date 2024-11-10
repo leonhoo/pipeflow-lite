@@ -65,17 +65,18 @@ Create your action files
 
 ```python
 from pipeflow.core.pipeflow_action import PipeflowAction
-
+from types import MappingProxyType
+from typing import Any
 
 class AAction(PipeflowAction):
-    def execute(self, context):
+    async def execute(self, params: MappingProxyType) -> Any:
         # Implement your data processing logic  
         # Access and modify data in the context  
         pass
 
 
 class BAction(PipeflowAction):
-    def execute(self, context):
+    async def execute(self, params: MappingProxyType) -> Any:
         # ...
         pass
 
@@ -84,7 +85,7 @@ class CAction(PipeflowAction):
     def upstream(self):
         return [AAction, BAction]
 
-    def execute(self, context):
+    async def execute(self, params: MappingProxyType) -> Any:
         # ... 
         pass
 # class D and E...
@@ -135,10 +136,10 @@ result = pipeline.execute(initial_params={"key1": "value1"})
 
 ## 5. Visualize the Flow
 
-Use visualizer.py to generate and view the flowchart of your action node sequences:
+Use view.py to generate and view the flowchart of your action node sequences:
 
 ```commandline
-python visualizer.py 
+python view.py 
 ```
 
 Note: The visualization part above is a hypothetical example. The actual visualizer.py will need to be implemented by
