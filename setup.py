@@ -9,11 +9,12 @@ with open("README.rst", "r", encoding='utf-8') as f:
 
 setup(
     name="pipeflow-lite",
-    version="0.1.0",
+    version="1.0.0",
     author="Leon",
     author_email="leon.hooo@outlook.com",
     description='A flexible and powerful data processing pipeline library',
     long_description=long_description,
+    long_description_content_type='text/markdown',
     url='https://github.com/leonhoo/pipeflow-lite',
     install_requires=[],
     license='MIT License',
