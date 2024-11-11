@@ -1,8 +1,8 @@
 # 概述
-Pipeflow 是一个灵活且强大的数据处理管道框架，旨在简化数据从源头到目标（如数据库、文件系统、API等）的流动过程。它基于插件化架构，允许用户根据需要轻松扩展功能，同时保持核心逻辑的简洁和高效。
+Pipeflow-lite 是一个灵活且强大的数据处理管道框架，旨在简化数据从源头到目标（如数据库、文件系统、API等）的流动过程。它基于插件化架构，允许用户根据需要轻松扩展功能，同时保持核心逻辑的简洁和高效。
 
 # 文件结构
-Pipeflow 的文件结构如下：
+Pipeflow-lite 的文件结构如下：
 
 pipeflow/  
 ├── core/  
@@ -27,10 +27,10 @@ pipeflow/
 日志与监控：（需自定义实现）提供详细的日志记录和监控功能，便于问题追踪和系统优化。
 扩展性：支持通过继承 pipeflow_action.py 中的基类来创建自定义的 action，以及通过继承 pipeflow_context.py 中的基类来创建自定义的上下文。
 # 安装
-Pipeflow 可以通过Python的包管理工具pip进行安装：
+Pipeflow-lite 可以通过Python的包管理工具pip进行安装：
 
 ```commandline
-pip install pipeflow
+pip install pipeflow-lite
 ```
 或者，如果你正在本地开发，可以直接使用项目的源代码：
 
@@ -40,7 +40,7 @@ python setup.py develop
 
 # 快速入门
 ## 1. 配置环境
-确保你的Python环境已经安装了Pipeflow及其依赖项。
+确保你的Python环境已经安装了Pipeflow-lite及其依赖项。
 
 ## 2. 定义Action
 创建你的 action 文件，例如：
@@ -49,6 +49,7 @@ python setup.py develop
 from pipeflow.core.pipeflow_action import PipeflowAction
 from types import MappingProxyType
 from typing import Any
+
 
 class AAction(PipeflowAction):
     async def execute(self, params: MappingProxyType) -> Any:
@@ -124,13 +125,13 @@ python view.py
 你可以通过继承 core/pipeflow_action.py 中的 PipeflowAction 基类来创建自定义的 action，以及通过继承 core/pipeflow_context.py 中的 PipeflowContext 基类来创建自定义的上下文。
 
 ## 贡献与社区
-Pipeflow 是一个开源项目，欢迎任何形式的贡献，包括代码提交、文档改进和反馈意见。你可以通过以下方式参与：
+Pipeflow-lite 是一个开源项目，欢迎任何形式的贡献，包括代码提交、文档改进和反馈意见。你可以通过以下方式参与：
 
 提交问题：在GitHub仓库中报告你遇到的问题或建议。
 贡献代码：分叉仓库，开发新功能或修复bug，然后提交拉取请求。
 文档更新：帮助完善README和其他文档，使其更加清晰易懂。
 ## 许可证
-Pipeflow 遵循MIT许可证，这意味着你可以自由地使用、修改和分发该项目，但需保留原作者的版权信息。
+Pipeflow-lite 遵循MIT许可证，这意味着你可以自由地使用、修改和分发该项目，但需保留原作者的版权信息。
 
 ------
 

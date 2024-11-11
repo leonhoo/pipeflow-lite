@@ -9,7 +9,7 @@ def draw(context: PipeflowContext):
     actions_graph = context._name_action_graph_
     hierarchical = context._sorted_downstream_level_hierarchical_graph_
 
-    dot = Digraph(comment='Pipeflow-OneContext', filename="one_context.gv", )
+    dot = Digraph(comment='PipeflowContext', filename="flow.gv", )
     dot.attr(rankdir='LR', size='10,5', splines='spline')
     for v_list in hierarchical.values():
         for v in v_list:
