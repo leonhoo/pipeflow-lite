@@ -1,14 +1,14 @@
 # Overview
 
-Pipeflow is a flexible and powerful data processing pipeline framework designed to simplify the flow of data from
+Pipeflow-lite is a flexible and powerful data processing pipeline framework designed to simplify the flow of data from
 sources to destinations such as databases, file systems, APIs, and more. It leverages a plugin-based architecture that
 allows users to easily extend functionality as needed while keeping the core logic simple and efficient.
 
 # File Structure
 
-The file structure of Pipeflow is as follows:
+The file structure of Pipeflow-lite is as follows:
 
-pipeflow/  
+pipeflow_lite/  
 ├── core/  
 │ ├── exceptions.py # Definitions of all exception types  
 │ ├── pipeflow_action.py # Base class for individual actions  
@@ -40,11 +40,11 @@ contexts by inheriting from the base class in pipeflow_context.py.
 
 # Installation
 
-Pipeflow can be installed via Python's package management tool pip (assuming you have packaged the project as an
+Pipeflow-lite can be installed via Python's package management tool pip (assuming you have packaged the project as an
 installable Python package):
 
 ```commandline
-pip install pipeflow
+pip install pipeflow-lite
 ```
 
 Alternatively, if you are developing locally, you can use the project's source code directly:
@@ -57,7 +57,7 @@ python setup.py develop
 
 ## 1. Configure the Environment
 
-Ensure your Python environment has Pipeflow and its dependencies installed.
+Ensure your Python environment has Pipeflow-lite and its dependencies installed.
 
 ## 2. Define Actions
 
@@ -67,6 +67,7 @@ Create your action files
 from pipeflow.core.pipeflow_action import PipeflowAction
 from types import MappingProxyType
 from typing import Any
+
 
 class AAction(PipeflowAction):
     async def execute(self, params: MappingProxyType) -> Any:
@@ -152,7 +153,7 @@ contexts by inheriting from the PipeflowContext base class in core/pipeflow_cont
 
 # Contributions & Community
 
-Pipeflow is an open-source project, and contributions in any form are welcome, including code submissions, documentation
+Pipeflow-lite is an open-source project, and contributions in any form are welcome, including code submissions, documentation
 improvements, and feedback. You can participate in the following ways:
 
 Report Issues: Report problems or suggestions you encounter in the GitHub repository.
@@ -161,7 +162,7 @@ Update Documentation: Help improve the README and other documentation to make it
 
 # License
 
-Pipeflow follows the MIT license, which means you can freely use, modify, and distribute the project while retaining the
+Pipeflow-lite follows the MIT license, which means you can freely use, modify, and distribute the project while retaining the
 original author's copyright information.
 
 ----
