@@ -28,14 +28,14 @@ downstream positions of each action node
 
 # Main Features
 
-1. Plugin-based Design: With a modular design, users can quickly integrate custom data sources, processors (actions), and
+- Plugin-based Design: With a modular design, users can quickly integrate custom data sources, processors (actions), and
 destinations.
-2. Data Flow Control: Supports multiple data flow control modes such as sequential, parallel (custom implementation
+- Data Flow Control: Supports multiple data flow control modes such as sequential, parallel (custom implementation
 required), and conditional branching.
-3. Data Transformation: Implements data transformation and processing by defining different actions.
-4. Logging & Monitoring (custom implementation required): Provides detailed logging and monitoring capabilities for easy
+- Data Transformation: Implements data transformation and processing by defining different actions.
+- Logging & Monitoring (custom implementation required): Provides detailed logging and monitoring capabilities for easy
 issue tracking and system optimization.
-5. Extensibility: Supports creating custom actions by inheriting from the base class in pipeflow_action.py and custom
+- Extensibility: Supports creating custom actions by inheriting from the base class in pipeflow_action.py and custom
 contexts by inheriting from the base class in pipeflow_context.py.
 
 # Installation
@@ -156,16 +156,12 @@ contexts by inheriting from the PipeflowContext base class in core/pipeflow_cont
 Pipeflow-lite is an open-source project, and contributions in any form are welcome, including code submissions, documentation
 improvements, and feedback. You can participate in the following ways:
 
-Report Issues: Report problems or suggestions you encounter in the GitHub repository.
-Contribute Code: Fork the repository, develop new features or fix bugs, and then submit pull requests.
-Update Documentation: Help improve the README and other documentation to make it clearer and easier to understand.
+- Report Issues: Report problems or suggestions you encounter in the GitHub repository.
+- Contribute Code: Fork the repository, develop new features or fix bugs, and then submit pull requests.
+- Update Documentation: Help improve the README and other documentation to make it clearer and easier to understand.
 
 # License
 
 Pipeflow-lite follows the MIT license, which means you can freely use, modify, and distribute the project while retaining the
 original author's copyright information.
 
-----
-
-Please adjust the above README content according to your actual project situation. Especially for the visualization part
-and specific pipeline execution logic, you may need to implement these features based on your project requirements.
