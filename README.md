@@ -28,14 +28,14 @@ downstream positions of each action node
 
 # Main Features
 
-Plugin-based Design: With a modular design, users can quickly integrate custom data sources, processors (actions), and
+1. Plugin-based Design: With a modular design, users can quickly integrate custom data sources, processors (actions), and
 destinations.
-Data Flow Control: Supports multiple data flow control modes such as sequential, parallel (custom implementation
+2. Data Flow Control: Supports multiple data flow control modes such as sequential, parallel (custom implementation
 required), and conditional branching.
-Data Transformation: Implements data transformation and processing by defining different actions.
-Logging & Monitoring (custom implementation required): Provides detailed logging and monitoring capabilities for easy
+3. Data Transformation: Implements data transformation and processing by defining different actions.
+4. Logging & Monitoring (custom implementation required): Provides detailed logging and monitoring capabilities for easy
 issue tracking and system optimization.
-Extensibility: Supports creating custom actions by inheriting from the base class in pipeflow_action.py and custom
+5. Extensibility: Supports creating custom actions by inheriting from the base class in pipeflow_action.py and custom
 contexts by inheriting from the base class in pipeflow_context.py.
 
 # Installation
